@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center">To Do List</h1>
+            <div class="row p-0">
+                <div class="col-md-7">
+                        <label for="inputTask" class="form-label">New Task</label>
+                        <input type="text" class="form-control" id="inputTask" placeholder="add new task">
+                </div>
+                <div class="col-md-5 row">
+                        <div class="col-6 col-sm-3 col-md-6 p-1">
+                        <button class="btn btn-success col-12" id="btnAdd" disabled><i class="fa-solid fa-square-plus"></i>Add</button>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-6 p-1">
+                        <button class="btn btn-danger col-12" id="btnClear" disabled><i class="fa-solid fa-delete-left"></i>Clear</button>
+                        </div>
+                        <div class="col-6 col-sm-3 col-md-6 p-1">
+                        <button class="btn btn-info col-12" id="btnSort" disabled><i class="fa-solid fa-arrow-down-wide-short"></i>Sort</button>
+                         </div>
+                         <div class="col-6 col-sm-3 col-md-6 p-1">
+                        <button class="btn btn-warning col-12" id="btnClean" disabled><i class="fa-solid fa-trash-can"></i>Clean</button>
+                        </div>
+                </div>
+            </div>
+            <div class="row m-1">
+                <ul class="list-group" id="ultask">
+                </ul>
+            </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+            <script src="{% static 'main/js/jquery.js' %}"></script>
+            <script src="{% static 'main/js/bootstrap.js' %}"></script>
+            <script src="{% static 'main/js/popper.js' %}"></script>
+            <script src="{% static 'main/js/script.js' %}"></script>
+
+    </body>
+</html>
